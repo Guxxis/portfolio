@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+:root {
+    /* Colors */
+    --primary-color: #06091F;
+    --secondary-color: #272A3C80;
+    --background-color: #000319;
+    --white: #FFFFFF;
+    --grey: #E4ECFF;
+    --black: #000000;
+
+}
+
+@theme {
+    --font-poppins: "Poppins", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    --linear-gradient-bg: linear-gradient(90deg, rgba(22, 26, 49, 1) 0%, rgba(6, 9, 31, 1) 100%);
+    --linear-gradient-border: linear-gradient(180deg, rgba(105, 113, 162, 0.4) 0%, rgba(39, 42, 60, 0.5) 100%);
+
+
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-primary);
+    max-width: 1920px;
+    margin: auto;
+}
