@@ -16,7 +16,7 @@ import { Header } from './components/header/header';
     Contact, 
     About, 
     Projects, 
-    Stacks
+    Stacks,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

@@ -26,6 +26,10 @@
 body {
     background-color: var(--background-color);
     font-family: var(--font-primary);
-    max-width: 1920px;
+    max-width: 1440px;
     margin: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
