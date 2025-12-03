@@ -12,11 +12,11 @@ import { Header } from './components/header/header';
   imports: [ 
     Header, 
     // Footer, 
-    // Banner, 
-    // Contact, 
+    Banner, 
+    Contact, 
     // About, 
-    // Projects, 
-    // Stacks,
+    Projects, 
+    Stacks,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

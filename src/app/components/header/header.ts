@@ -1,5 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 
@@ -11,10 +11,16 @@ import { RouterModule } from '@angular/router';
 })
 export class Header {
 
-  isOpenMenu:boolean = false;
+  isOpenMenu: boolean = false;
+  isFixed = false;
 
-  toggleMenu():any {
+  toggleMenu() {
     this.isOpenMenu = !this.isOpenMenu;
     console.log(this.isOpenMenu)
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.isFixed = window.scrollY > 50;
   }
 }
