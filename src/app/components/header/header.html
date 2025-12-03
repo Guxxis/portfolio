@@ -1,7 +1,7 @@
-<header class="relative flex items-center justify-between w-full py-5 px-10 bg-transparent mt-20">
+<!-- <header class="relative flex items-center justify-between w-full py-5 px-10 bg-transparent mt-20">
     <img src="grid-pattern.png" alt="" class="absolute -z-10 brightness-150 top-0">
-    <!-- <img src="spotlight.png" alt="" class="absolute -z-10 brightness-150 -left-80"> -->
-    <!-- <img src="spotlight.png" alt="" class="absolute -z-10 brightness-150 -right-80 -scale-x-100"> -->
+    <img src="spotlight.png" alt="" class="absolute -z-10 brightness-150 -left-80">
+    <img src="spotlight.png" alt="" class="absolute -z-10 brightness-150 -right-80 -scale-x-100">
 
     <div class="font-poppins text-5xl font-black tracking-wide text-white">GUXXIS;</div>
 
@@ -13,7 +13,7 @@
                 class="border-b border-[var(--primary-color)] hover:border-white transition">Sobre</a>
             <a  href="#conhecimento"
                 class="border-b border-[var(--primary-color)] hover:border-white transition">Conhecimento</a>
-            <!-- <a  href="#projetos" class="border-b border-[var(--primary-color)] hover:border-white transition">Projetos</a> -->
+            <a  href="#projetos" class="border-b border-[var(--primary-color)] hover:border-white transition">Projetos</a>
             <a  href="#contato" class="border-b border-[var(--primary-color)] hover:border-white transition">Contato</a>
         </nav>
     </div>
@@ -27,5 +27,26 @@
         <a href="mailto:contato@guxxis.com" rel="nofollow" target="_blank" class="text-white hover:scale-110 transition">
             <i class="bi bi-envelope text-xl"></i>
         </a>
+    </div>
+</header> -->
+
+
+<header class="text-white relative bg-amber-700">
+    <div class="flex justify-between items-center">
+        <span class="text-5xl font-poppins font-bold">GUXXIS;</span>
+        <span (click)="toggleMenu()" class="text-5xl">
+            <i class="bi transition-all ease-in duration-300" [ngClass]="isOpenMenu ? 'bi-x':'bi-list'"></i>
+        </span>
+    </div>
+    <div class="absolute bg-lime-700 -z-[1] w-full transition-all ease-in duration-300"
+            [ngClass]="isOpenMenu?'translate-y-0':'translate-y-[calc(-100%)]'">
+        <nav class="p-4">
+            <ul>
+                <li><a href="">Text 1</a></li>
+                <li><a href="">Text 2</a></li>
+                <li><a href="">Text 3</a></li>
+                <li><a href="">Text 4</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
