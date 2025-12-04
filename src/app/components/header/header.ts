@@ -21,6 +21,6 @@ export class Header {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    this.isFixed = window.scrollY > 50;
+    this.isFixed = window.scrollY > 200;
   }
 }
