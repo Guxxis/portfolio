@@ -1,29 +1,67 @@
-<header class="text-white h-[6rem] flex justify-between items-center gap-5 z-10 md:bg-none bg-linear-to-r/srgb from-[#070A21] to-[#14182F] py-4 px-2" [ngClass]="isFixed?'fixed top-0 w-full transition-all ease-in-out duration-200':'relative'">
+<header class="
+        w-full 
+        transition-all ease-in-out duration-200"
+    [ngClass]="isFixed?'fixed top-0 bg-linear-to-r/srgb from-[#070A21] to-[#14182F] ':'static'">
 
-    <img src="logo.png" alt="logo" class="w-[150px]">
-    <span (click)="toggleMenu()" class="md:hidden text-5xl">
-        <i class="bi transition-all ease-in duration-300" [ngClass]="isOpenMenu ? 'bi-x':'bi-list'"></i>
-    </span>
-    <div class="md:static absolute md:flex justify-center p-2 pb-8 left-0 rounded-b-2xl -z-[1] items-center md:bg-none bg-linear-to-r/srgb from-[#070A21] to-[#14182F] md:z-auto md:translate-y-0 w-full md:transition-none transition-all ease-in duration-300"
-        [ngClass]="isOpenMenu?'translate-y-[8rem] pointer-events-auto':'translate-y-[calc(-100%)] pointer-events-none'">
-        <nav>
-            <ul class="flex md:flex-row flex-col justify-center items-center gap-4 font-inter text-md font-semibold ">
-                <li><a href="">Home</a></li>
-                <li><a href="">Stacks</a></li>
-                <li><a href="">Projetos</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="md:flex hidden items-center gap-5 px-5 py-3 rounded-full border border-white/25 shadow-lg leading-5">
-        <a href="https://github.com/guxxis" rel="nofollow" target="_blank" class="text-white hover:scale-110 transition">
-            <i class="bi bi-github text-xl"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/gustavogoncalves9914587/" rel="nofollow" target="_blank" class="text-white hover:scale-110 transition">
-            <i class="bi bi-linkedin text-xl"></i>
-        </a>
-        <a href="mailto:contato@guxxis.com" rel="nofollow" target="_blank" class="text-white hover:scale-110 transition">
-            <i class="bi bi-envelope text-xl"></i>
-        </a>
+    <div class="
+            flex
+            static
+            justify-between items-center gap-5
+            mx-auto px-4 py-6 
+            bg-linear-to-r/srgb from-[#070A21] to-[#14182F]
+            md:bg-none md:max-w-[1440px]">
+
+        <img src="logo.png" alt="logo" class="md:w-2/12">
+
+        <span (click)="toggleMenu()" class="md:hidden text-5xl">
+            <i class="
+                bi transition-all ease-in duration-300" [ngClass]="isOpenMenu ? 'bi-x':'bi-list'"></i>
+        </span>
+
+        <div class="
+            md:flex 
+            md:static absolute left-0 -z-[1] md:z-auto
+            justify-center items-center
+            w-full md:w-5/12 p-2 pb-8 md:p-2
+            md:leading-5
+            md:rounded-full rounded-b-3xl
+            md:border-white/25 md:bg-none bg-linear-to-r/srgb from-[#070A21] to-[#14182F]
+            md:shadow-lg 
+            md:translate-y-0 md:transition-none transition-all ease-in duration-300"
+            [ngClass]="isOpenMenu?'translate-y-[8rem] pointer-events-auto':'translate-y-[calc(-100%)] pointer-events-none'"
+            [ngClass]="isFixed?'md:border-none':'md:border'">
+            <nav>
+                <ul class=" 
+                        flex w-full
+                        md:flex-row flex-col justify-center items-center gap-4 
+                        font-montserrat md:text-2xl text-md font-semibold ">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Stacks</a></li>
+                    <li><a href="">Projetos</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="
+            md:flex hidden 
+            items-center justify-around gap-5 
+            px-5 py-3 md:w-2/12
+            leading-5
+            rounded-full border 
+            border-white/25 
+            shadow-lg" [ngClass]="isFixed?'md:border-none ':'md:border'">
+
+            <a href="https://github.com/guxxis" rel="nofollow" target="_blank" class="hover:scale-110 transition">
+                <i class="bi bi-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gustavogoncalves9914587/" rel="nofollow" target="_blank"
+                class="hover:scale-110 transition">
+                <i class="bi bi-linkedin text-xl"></i>
+            </a>
+            <a href="mailto:contato@guxxis.com" rel="nofollow" target="_blank" class="hover:scale-110 transition">
+                <i class="bi bi-envelope text-xl"></i>
+            </a>
+        </div>
     </div>
 </header>
