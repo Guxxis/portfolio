@@ -12,7 +12,7 @@ import { Header } from './components/header/header';
   imports: [ 
     Header, 
     // Footer, 
-    // Banner, 
+    Banner, 
     // Contact, 
     // About, 
     // Projects, 
