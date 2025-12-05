@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ExternButton } from '../extern-button/extern-button';
 
 @Component({
   selector: 'app-banner',
-  imports: [],
+  imports: [ExternButton],
   templateUrl: './banner.html',
   styleUrl: './banner.css',
 })
