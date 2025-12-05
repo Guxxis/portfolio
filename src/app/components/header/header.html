@@ -1,9 +1,81 @@
+<img src="grid-pattern.png" alt="" class="md:block hidden absolute -z-10 brightness-150 translate-y-0">
+<img src="spotlight.png" alt="" class="md:block hidden absolute -z-10 brightness-150 translate-y-0 left-0">
+<img src="spotlight.png" alt="" class="md:block hidden absolute -z-10 brightness-150 translate-y-0 right-0 -scale-x-100">
+
+@if (!isFixed) {
 <header class="
         w-full 
-        transition-all ease-in-out duration-400" 
-        [ngClass]="isFixed
-        ?'fixed mt-0 translate-y-0 bg-linear-to-r/srgb from-[#070A21] to-[#14182F] '
-        :'static mt-10 bg-linear-to-r/srgb from-[#070A21] to-[#14182F] md:bg-none'">
+        md:pt-10
+        bg-linear-to-r/srgb from-[#070A21] to-[#14182F] md:bg-none
+        transition-all ease-in-out duration-400">
+
+    <div class="
+            flex
+            static
+            justify-between items-center gap-5
+            mx-auto px-4 py-6
+            md:max-w-[1440px]">
+
+        <img src="logo.png" alt="logo" class="md:w-2/12">
+
+        <span (click)="toggleMenu()" class="md:hidden text-5xl">
+            <i class="
+                bi transition-all ease-in duration-300" [ngClass]="isOpenMenu ? 'bi-x':'bi-list'"></i>
+        </span>
+
+        <div class="
+            md:flex 
+            md:static absolute left-0  md:z-auto
+            justify-center items-center
+            w-full lg:w-5/12 p-2 pb-8 md:p-4
+            md:rounded-full rounded-b-3xl
+            md:border md:border-white/25 md:bg-none bg-linear-to-r/srgb from-[#070A21] to-[#14182F]
+            md:shadow-lg 
+            md:translate-y-0 md:transition-none transition-transform ease-in duration-300" [ngClass]="{
+            'translate-y-[8rem] pointer-events-auto z-auto':isOpenMenu,
+            '-translate-y-full pointer-events-none -z-10':!isOpenMenu,
+        }">
+            <nav class=" 
+                flex 
+                w-full px-2
+                md:flex-row flex-col justify-center md:justify-between items-center gap-4
+                font-montserrat md:text-lg lg:text-2xl text-md font-semibold md:leading-5">
+                <a href="/home" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Home</a>
+                <a href="" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Stacks</a>
+                <a href="" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Projetos</a>
+                <a href="" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Contato</a>
+            </nav>
+        </div>
+
+        <div class="
+            md:flex hidden 
+            items-center justify-around gap-5 
+            px-5 py-3 lg:w-2/12
+            leading-5
+            rounded-full border 
+            border-white/25 
+            shadow-lg">
+
+            <a href="https://github.com/guxxis" rel="nofollow" target="_blank" class="hover:scale-110 transition">
+                <i class="bi bi-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gustavogoncalves9914587/" rel="nofollow" target="_blank"
+                class="hover:scale-110 transition">
+                <i class="bi bi-linkedin text-xl"></i>
+            </a>
+            <a href="mailto:contato@guxxis.com" rel="nofollow" target="_blank" class="hover:scale-110 transition">
+                <i class="bi bi-envelope text-xl"></i>
+            </a>
+        </div>
+    </div>
+</header>
+}
+@else {
+<header class="
+        fixed
+        w-full 
+        bg-linear-to-r/srgb from-[#070A21] to-[#14182F]
+        transition-all ease-in duration-400" [ngClass]="isFixed?'translate-y-0':'-translate-y-full'">
 
     <div class="
             flex
@@ -25,35 +97,28 @@
             justify-center items-center
             w-full md:w-5/12 p-2 pb-8 md:p-4
             md:rounded-full rounded-b-3xl
-            md:border-white/25 md:bg-none bg-linear-to-r/srgb from-[#070A21] to-[#14182F]
-            md:shadow-lg 
-            md:translate-y-0 md:transition-none transition-all ease-in duration-300" 
-            [ngClass]="{
+            md:bg-none bg-linear-to-r/srgb from-[#070A21] to-[#14182F]
+            md:translate-y-0 md:transition-none transition-all ease-in duration-300" [ngClass]="{
             'translate-y-[8rem] pointer-events-auto':isOpenMenu,
-            '-translate-y-full pointer-events-none':!isOpenMenu,
-            'md:border-none':isFixed,
-            'md:border':!isFixed
+            '-translate-y-full pointer-events-none':!isOpenMenu
         }">
             <nav class=" 
                 flex 
                 w-full px-2
                 md:flex-row flex-col justify-center md:justify-between items-center gap-4
                 font-montserrat md:text-2xl text-md font-semibold md:leading-5">
-                <a href="">Home</a>
-                <a href="">Stacks</a>
-                <a href="">Projetos</a>
-                <a href="">Contato</a>
+                <a href="/home" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Home</a>
+                <a href="" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Stacks</a>
+                <a href="" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Projetos</a>
+                <a href="" class="pointer-events-auto border-b border-white/0 hover:border-white transition-all ease-in duration-200">Contato</a>
             </nav>
         </div>
 
         <div class="
             md:flex hidden 
             items-center justify-around gap-5 
-            px-5 py-3 md:w-2/12
-            leading-5
-            rounded-full border 
-            border-white/25 
-            shadow-lg" [ngClass]="isFixed?'md:border-none ':'md:border'">
+            px-5 py-3 w-2/12
+            leading-5">
 
             <a href="https://github.com/guxxis" rel="nofollow" target="_blank" class="hover:scale-110 transition">
                 <i class="bi bi-github text-xl"></i>
@@ -68,3 +133,4 @@
         </div>
     </div>
 </header>
+}
