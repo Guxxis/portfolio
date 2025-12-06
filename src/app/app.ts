@@ -14,7 +14,7 @@ import { Header } from './components/header/header';
     // Footer, 
     Banner, 
     // Contact, 
-    // About, 
+    About, 
     // Projects, 
     // Stacks,
   ],
