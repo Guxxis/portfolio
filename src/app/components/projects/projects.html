@@ -1,9 +1,53 @@
 <section id="projetos" class="text-white flex flex-col items-center justify-center mt-20 px-5 gap-10 md:max-w-[1440px] m-auto">
     <h2 class="font-poppins text-5xl uppercase font-black">Projetos</h2>
 
-    <div class="flex flex-col md:flex-row justify-between items-center gap-5">
-        <app-card-project></app-card-project>
-        <app-card-project></app-card-project>
-        <app-card-project></app-card-project>
+    <div class="flex flex-col md:flex-row justify-between items-top  gap-5">
+        <app-card-project
+            [textTitle]="'Portfolio Pessoal'"
+            [textDesc]="'Desenvolvimento do portifolio pessoal contruido com Angular e Tailwind, tecnologias modernas do mercado.'"
+            [urlPath]="'https://github.com/guxxis'"
+            [imgPath]="'thumbs/portfolio.png'"
+            [stackList]="[
+                {nome:'Angular', img:'icons/angular.svg'},
+                {nome:'HTML', img:'icons/html.svg'},
+                {nome:'TypeScript', img:'icons/typescript.svg'},
+                {nome:'Tailwind', img:'icons/tailwind.svg'},
+            ]"
+        ></app-card-project>
+        <app-card-project
+            [textTitle]="'Script Scraping Server'"
+            [textDesc]="'Desenvolvimento de um sistema capaz de buscar todos os dominios dos servidores linux internos e cruzando com a base de clientes da empresa, para validar o DNS e Status dos sites'"
+            [urlPath]="'https://github.com/guxxis'"
+            [imgPath]="'thumbs/default-project.png'"
+            [stackList]="[
+                {nome:'NodeJs', img:'icons/nodejs.svg'},
+                {nome:'HTML', img:'icons/html.svg'},
+                {nome:'JS', img:'icons/javascript.svg'},
+                {nome:'MongoDb', img:'icons/mongodb.svg'},
+            ]"
+        ></app-card-project>
+        <app-card-project
+            [textTitle]="'QA Checklist Form'"
+            [textDesc]="'Desenvolvimento de um formulario checklist para auxiliar a validação de sites SEO.'"
+            [urlPath]="'https://github.com/guxxis'"
+            [imgPath]="'thumbs/form-checklist.png'"
+            [stackList]="[
+                {nome:'JS', img:'icons/angular.svg'},
+                {nome:'HTML', img:'icons/html.svg'},
+                {nome:'CSS', img:'icons/javascript.svg'},
+                {nome:'BigQuery', img:'icons/bigquery.svg'},
+                {nome:'BootStrap', img:'icons/bootstrap.svg'},
+            ]"
+        ></app-card-project>
+        <app-card-project
+            [textTitle]="'DNS Validator (Em construção)'"
+            [textDesc]="'Desenvolvimento de uma ferramenta de Validação DNS em Massa.'"
+            [urlPath]="'https://github.com/guxxis'"
+            [imgPath]="'thumbs/default-project.png'"
+            [stackList]="[
+                {nome:'NodeJs', img:'icons/nodejs.svg'},
+                {nome:'Playwright', img:'icons/playwright.svg'}
+            ]"
+        ></app-card-project>
     </div>
 </section>

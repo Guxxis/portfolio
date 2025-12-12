@@ -1,18 +1,18 @@
 <div
-    class="border rounded-2xl border-[#3637496E] bg-linear-to-r/srgb from-[#04071D] to-[#0C0E23] p-3 flex flex-col gap-3">
-    <div class="bg-[#13162D] min-h-40 rounded-xl object-cover">
-        <img src="default-project.png" alt="">
+    class="border rounded-2xl h-full border-[#3637496E] bg-linear-to-r/srgb from-[#04071D] to-[#0C0E23] p-3 flex flex-col gap-3 min-w-1/4 max-w-[300px] justify-between">
+    <div>
+        <div class="bg-[#13162D] min-h-40 min-w-40 rounded-xl object-fill">
+            <img src="{{imgPath}}" alt="{{textTitle}}" class="">
+        </div>
+        <h3 class="font-bold text-xl py-2">{{textTitle}}</h3>
+        <p>{{textDesc}}</p>
     </div>
-    <h3>3D Solar System Planets to Explore</h3>
-    <p>Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.</p>
     <div class="flex justify-between w-full">
         <ul class="flex gap-2">
-            <li><img src="icons/angular.svg" alt="Angular" class="w-7"></li>
-            <li><img src="icons/tailwind.svg" alt="Angular" class="w-7"></li>
-            <li><img src="icons/html.svg" alt="Angular" class="w-7"></li>
-            <li><img src="icons/css.svg" alt="Angular" class="w-7"></li>
-            <li><img src="icons/typescript.svg" alt="Angular" class="w-7"></li>
+            @for( stack of stackList; track stackList){
+                <li><img src="{{stack.img}}" alt="{{stack.nome}}" title="{{stack.nome}}" class="w-7"></li>
+            }
         </ul>
-        <a href="" class="text-lg font-medium leading-6">Confira<i class="bi bi-arrow-up-right"></i></a>
+        <a href="{{urlPath}}" rel="nofollow" target="_blank" class="text-lg font-medium leading-6">Confira<i class="bi bi-arrow-up-right"></i></a>
     </div>
 </div>
