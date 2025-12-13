@@ -1,8 +1,8 @@
 <div
-    class="border rounded-2xl h-full border-[#3637496E] bg-linear-to-r/srgb from-[#04071D] to-[#0C0E23] p-3 flex flex-col gap-3 min-w-1/4 max-w-[300px] justify-between">
+    class="border rounded-2xl h-full border-[#3637496E] bg-linear-to-r/srgb from-[#04071D] to-[#0C0E23] p-3 flex flex-col gap-3 min-w-1/4 max-w-[300px] justify-between hover:scale-105 transition-all ease-in group duration-200 hover:shadow-purple-700/50 shadow-lg ">
     <div>
-        <div class="bg-[#13162D] min-h-40 min-w-40 rounded-xl object-fill">
-            <img src="{{imgPath}}" alt="{{textTitle}}" class="">
+        <div class="bg-[#13162D] rounded-xl h-50 overflow-hidden">
+            <img src="{{imgPath}}" alt="{{textTitle}}" class="object-cover w-full h-full group-hover:rotate-3 group-hover:scale-105 transition-all ease-in duration-200">
         </div>
         <h3 class="font-bold text-xl py-2">{{textTitle}}</h3>
         <p>{{textDesc}}</p>
@@ -13,6 +13,6 @@
                 <li><img src="{{stack.img}}" alt="{{stack.nome}}" title="{{stack.nome}}" class="w-7"></li>
             }
         </ul>
-        <a href="{{urlPath}}" rel="nofollow" target="_blank" class="text-lg font-medium leading-6">Confira<i class="bi bi-arrow-up-right"></i></a>
+        <a href="{{urlPath}}" rel="nofollow" target="_blank" class="text-lg font-medium border-b border-b-white/0 hover:border-b-white leading-6">Confira <i class="bi bi-arrow-up-right"></i></a>
     </div>
 </div>
