@@ -1,59 +1,48 @@
-# Portfolio
+# 🚀 Portfolio Pessoal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+Este projeto é um portfólio moderno e responsivo, construído com Angular e estilizado com Tailwind CSS. Ele demonstra minhas habilidades em desenvolvimento front-end, arquitetura de componentes e consumo de APIs.
 
-## Development server
+**Objetivo:** Apresentar projetos, stacks e informações de contato de forma performática e visualmente atraente.
 
-To start a local development server, run:
+## 🛠️ Stacks de Desenvolvimento
 
-```bash
-ng serve
-```
+* **Front-end Framework:** Angular 17+
+* **Linguagem:** TypeScript
+* **Estilização:** Tailwind CSS
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚙️ Pré-requisitos
 
-## Code scaffolding
+Antes de começar, você precisa ter o [Node.js](https://nodejs.org/) e o Angular CLI instalados globalmente:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* Node.js (LTS v18 ou superior)
+* Angular CLI: `npm install -g @angular/cli`
 
-```bash
-ng generate component component-name
-```
+## 💻 Instalação e Uso
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/Guxxis/portfolio
+    cd portfolio
+    ```
 
-```bash
-ng generate --help
-```
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-## Building
+3.  **Execute o servidor de desenvolvimento:**
+    ```bash
+    ng serve
+    ```
+    Navegue para `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer arquivo de origem.
 
-To build the project run:
+## 🗺️ Estrutura de Componentes
 
-```bash
-ng build
-```
+O projeto segue a arquitetura padrão do Angular e o **Princípio da Responsabilidade Única (SRP)**:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* `app/components/`: Componentes reutilizáveis (Ex: `card-project`, `button`, `header`).
+* `app/services/`: Lógica de consumo de API e estado global.
 
-## Running unit tests
+## 📄 Licença
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto está sob a Licença MIT.
