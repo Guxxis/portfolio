@@ -33,7 +33,6 @@ export class ContactForm {
       grecaptcha.ready(async () => {
         const token = await grecaptcha.execute('6Lc6YyssAAAAAFkS3dDyd8EOjqU5Yjv1Vibcg-Qu', { action: 'contact_form' });
         this.contactForm.get('recaptchaToken')?.setValue(token);
-        console.log(this.contactForm.get('recaptchaToken'))
         this.http.post('/api/contato', this.contactForm.value)
           .subscribe({
             next: (response) => {
