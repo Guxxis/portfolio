@@ -1,0 +1,9 @@
+<form [formGroup]="contactForm" (submit)="onSubmit()">
+    <div class="flex flex-col">
+        <input formControlName="nome" type="text" placeholder="Seu nome">
+        <input formControlName="email" type="email" placeholder="Seu email">
+        <input formControlName="telefone" type="tel" placeholder="Seu telefone">
+        <textarea formControlName="mensagem" type="text" placeholder="Mensagem"></textarea>
+        <button type="submit" [disabled]="!contactForm.valid">Enviar</button>
+    </div>
+</form>
