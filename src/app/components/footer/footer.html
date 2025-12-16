@@ -26,7 +26,8 @@
                 class="text-white shadow-inner shadow-white/20 p-2 rounded-lg max-h-min"><i
                     class="bi bi-github"></i></a>
         </div>
-        <a href="/home" class="absolute md:bottom-20 bottom-10 md:right-40 right-5">
+        <a href="/home" class="fixed md:bottom-20 bottom-30 md:right-40 right-5 transition-all ease-in duration-300"
+        [ngClass]="isScrolled?'translate-y-0':'translate-y-[200px]'">
             <i class="bi bi-arrow-up-circle-fill text-6xl"></i>
         </a>
     </div>
